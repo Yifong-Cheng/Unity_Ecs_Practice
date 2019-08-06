@@ -25,12 +25,16 @@ public class UnitSpawnSystem : JobComponentSystem
                     var position = math.transform(location.Value, new float3(x * 5, 0, y * 5));
 
                     //something else...
+                    var rotatedata = new UnitRotateData
+                    {
+                        RotateSpeed = 5f,
+                    };
 
                     m_commandBuffer.SetComponent(instance, new Translation { Value = position });
 
                     //if want to add other compoments...
                     //...
-
+                    m_commandBuffer.AddComponent(instance, rotatedata);
                 }
             }
             m_commandBuffer.DestroyEntity(entity);
