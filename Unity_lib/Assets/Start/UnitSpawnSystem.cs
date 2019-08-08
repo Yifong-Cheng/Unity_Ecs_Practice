@@ -22,7 +22,8 @@ public class UnitSpawnSystem : JobComponentSystem
                 for(int y=0; y<data.count_y; y++)
                 {
                     var instance = m_commandBuffer.Instantiate(data.prefab);
-                    var position = math.transform(location.Value, new float3(x * 5, 0, y * 5));
+                    //var position = math.transform(location.Value, new float3(x * 5, 0, y * 5));
+                    var position = math.transform(location.Value, new float3(x * 2, (x+1)%data.count_x , y * 2));
 
                     //something else...
                     var rotatedata = new UnitRotateData
@@ -30,11 +31,18 @@ public class UnitSpawnSystem : JobComponentSystem
                         RotateSpeed = 5f,
                     };
 
+                    var movedata = new UnitMoveData
+                    {
+                        velocity = new float3(0, 1, 0),
+                        movespeed = 2,
+                    };
+
                     m_commandBuffer.SetComponent(instance, new Translation { Value = position });
 
                     //if want to add other compoments...
                     //...
                     m_commandBuffer.AddComponent(instance, rotatedata);
+                    m_commandBuffer.AddComponent(instance, movedata);
                 }
             }
             m_commandBuffer.DestroyEntity(entity);

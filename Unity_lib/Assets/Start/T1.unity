@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
-    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62655306}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 11.2, y: 19.8, z: -4.8}
+  m_LocalPosition: {x: 100, y: 50, z: 115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fbe293fe2db4daf6bc1a47dcb3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Count_X: 5
-  Count_Y: 5
+  Count_X: 100
+  Count_Y: 100
   Prefab: {fileID: 2506853742336358548, guid: 2167556d5797b8c45ab07cebc9210764, type: 3}
 --- !u!114 &1948079906
 MonoBehaviour:
